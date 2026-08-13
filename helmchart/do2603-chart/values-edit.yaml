@@ -66,7 +66,7 @@ ingress:
     # Báo cho controller biết đây là Ingress cho ALB
     kubernetes.io/ingress.class: alb 
     # Đặt tên nhóm chung, ví dụ: "do2506-group"
-    alb.ingress.kubernetes.io/group.name: alb-do2602-group 
+    alb.ingress.kubernetes.io/group.name: alb-do2603-group 
     # Cấu hình ALB là internet-facing (hoặc internal nếu bạn muốn nội bộ)
     alb.ingress.kubernetes.io/scheme: internet-facing
     # Sử dụng IP target type (hiệu quả hơn, yêu cầu AWS CNI): ip or instance
@@ -79,11 +79,12 @@ ingress:
     # Chỉ định ARN của chứng chỉ SSL từ AWS Certificate Manager (ACM)
     # Thay thế ARN này bằng ARN thực tế của bạn
     #alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:123456789012:certificate/uuid-cua-ban
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-southeast-1:527055790396:certificate/227a8d05-eb92-4c74-9306-2f16b66b8916
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-southeast-1:154931139523:certificate/31e48006-c4b5-4674-8507-231ccef12e5f
+    #alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-southeast-1:527055790396:certificate/227a8d05-eb92-4c74-9306-2f16b66b8916
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: tvtien-bfms.do2602.click
+    - host: tvtien-bfms.do2603.click
       paths:
         - path: /
           # pathType: ImplementationSpecific
